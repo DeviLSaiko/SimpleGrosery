@@ -40,7 +40,7 @@
                             <label class="form-check-label" for="exampleCheck1">Seller</label>
                         </div>
                         <div class="mb-3 d-grid">
-                          <button type="submit" class="btn btn-primary">Submit</button>
+                          <button type="submit" class="btn btn-primary">Login</button>
                         </div>
 
                       

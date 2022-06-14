@@ -43,23 +43,23 @@
 
                 <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">Seller Name</label>
-                    <input type="email" class="form-control" id="txtProName" aria-describedby="emailHelp" />
+                    <input type="email" class="form-control" id="txtProName"  runat="server"  />
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">Seller Email</label>
-                    <input type="email" class="form-control" id="txtProCate" aria-describedby="emailHelp" />
+                    <input type="email" class="form-control" id="txtProCate"  runat="server"  />
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">Seller Password</label>
-                    <input type="password" class="form-control" id="txtProPri" aria-describedby="emailHelp" />
+                    <input type="password" class="form-control" id="txtProPri"  runat="server"  />
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">Seller Phone</label>
-                    <input type="email" class="form-control" id="txtProQty" aria-describedby="emailHelp" />
+                    <input type="email" class="form-control" id="txtProQty"  runat="server"  />
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">Seller Address</label>
-                    <input type="Datetime" class="form-control" id="txtExpDate" aria-describedby="emailHelp" />
+                    <input type="Text" class="form-control" id="txtExpDate"   runat="server" />
                 </div>
 
                 <asp:Button Text=" Save  " runat="server" CssClass="btn btn-success" />

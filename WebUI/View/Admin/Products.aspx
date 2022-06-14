@@ -3,6 +3,34 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+        <nav class="navbar navbar-expand-sm bg-primary navbar-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Logo</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                    <a class="nav-link" href="Dashboard.aspx">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Categories.aspx">Categories</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="Products.aspx">Products</a>
+                    </li>
+                     <li class="nav-item">
+                        <a class="nav-link  " href="Sellers.aspx">Sellers</a>
+                    </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="../Login.aspx">Log Out</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
     <div class="row" style="height: 60px">
     </div>
 
@@ -20,19 +48,19 @@
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">Product Category</label>
-                    <input type="email" class="form-control" id="txtProCate" aria-describedby="emailHelp" />
+                    <input type="email" class="form-control" id="txtProCate"  runat="server" />
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">Product Price</label>
-                    <input type="email" class="form-control" id="txtProPri" aria-describedby="emailHelp" />
+                    <input type="email" class="form-control" id="txtProPri"  runat="server"  />
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">Product Quantity</label>
-                    <input type="email" class="form-control" id="txtProQty" aria-describedby="emailHelp" />
+                    <input type="email" class="form-control" id="txtProQty"  runat="server"  />
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">Expiration Date  </label>
-                    <input type="Date" class="form-control" id="txtExpDate" aria-describedby="emailHelp" />
+                    <input type="Date" class="form-control" id="txtExpDate"  runat="server"  />
                 </div>
 
                 <asp:Button Text=" Save  " runat="server" CssClass="btn btn-success" />
@@ -42,6 +70,7 @@
             </form>
         </div>
         <div class="col-md-8">
+            <asp:GridView runat="server" CssClass="table"></asp:GridView>
         </div>
     </div>
 
