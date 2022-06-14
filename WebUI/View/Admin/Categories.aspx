@@ -9,12 +9,12 @@
         <div class="col-md-1"></div>
         <div class="col-md-3">
 
-            <h2 class="text-info">Products Details</h2>
+            <h2 class="text-info">Category Details</h2>
 
             <form>
 
                 <div class="mb-3">
-                    <label for="exampleInputEmail1" class="form-label">Product Name</label>
+                    <label for="exampleInputEmail1" class="form-label">Category Name</label>
                     <input type="email" class="form-control" id="txtProName" aria-describedby="emailHelp" />
                 </div>
                 <div class="mb-3">
@@ -26,7 +26,7 @@
                     <input type="email" class="form-control" id="txtProPri" aria-describedby="emailHelp" />
                 </div>
                 <div class="mb-3">
-                    <label for="exampleInputEmail1" class="form-label">Product Quantity</label>
+                    <label for="exampleInputEmail1" class="form-label">Ca Quantity</label>
                     <input type="email" class="form-control" id="txtProQty" aria-describedby="emailHelp" />
                 </div>
                 <div class="mb-3">
