@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/View/Admin/Admin.Master" AutoEventWireup="true" CodeBehind="Products.aspx.cs" Inherits="WebUI.View.Admin.Products" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/View/Admin/Admin.Master" AutoEventWireup="true" EnableEventValidation="false" CodeBehind="Products.aspx.cs" Inherits="WebUI.View.Admin.Products" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
@@ -40,33 +40,39 @@
             <form>
                 <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">Product Name</label>
-                    <input type="email" class="form-control" id="txtProName" aria-describedby="emailHelp" />
+                   <asp:TextBox ID="txtProName" CssClass="form-control" runat="server"></asp:TextBox>
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">Product Category</label>
-                    <input type="email" class="form-control" id="txtProCate" runat="server" />
+                    <asp:DropDownList ID="ddProCateto" CssClass="form-select" runat="server"></asp:DropDownList>
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">Product Price</label>
-                    <input type="email" class="form-control" id="txtProPri" runat="server" />
+                    <asp:TextBox ID="txtProPrice" CssClass="form-control" runat="server"></asp:TextBox>
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">Product Quantity</label>
-                    <input type="email" class="form-control" id="txtProQty" runat="server" />
+                  <asp:TextBox ID="txtProQtty" CssClass="form-control" runat="server"></asp:TextBox>
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">Expiration Date  </label>
-                    <input type="Date" class="form-control" id="txtExpDate" runat="server" />
+                   <asp:TextBox ID="txtProExpDate" TextMode="Date" CssClass="form-control" runat="server"></asp:TextBox>
                 </div>
-                <asp:Button Text=" Save  " runat="server" CssClass="btn btn-success" />
-                <asp:Button Text="Update" runat="server" CssClass="btn btn-primary" />
-                <asp:Button Text="Delete" runat="server" CssClass="btn btn-danger" />
+                <div>
+                    <asp:Label ID="err" CssClass="text-danger" runat="server" Text=""></asp:Label>
+                </div>
+                <div>
+                    <asp:Button Text=" Save  " ID="BtnSave" runat="server" OnClick="BtnSave_Click" CssClass="btn btn-success" />
+                    <asp:Button Text="Update" ID="btnUpdate" runat="server" CssClass="btn btn-primary" OnClick="btnUpdate_Click" />
+                    <asp:Button Text="Delete" ID="BtnDelete" runat="server" CssClass="btn btn-danger" OnClick="BtnDelete_Click" />
+                </div>
+
             </form>
         </div>
         <div class="col-md-8">
-           <div class="col-sm-8">
-            <asp:GridView ID="GridView1" CssClass="table table-hover"  EnableViewState="false" runat="server" AutoGenerateSelectButton="True" OnSelectedIndexChanged="GridView1_SelectedIndexChanged"></asp:GridView>
-        </div>
+            <div class="col-sm-8">
+                <asp:GridView ID="GridView1" CssClass="table table-hover" EnableViewState="false" runat="server" AutoGenerateSelectButton="True"></asp:GridView>
+            </div>
         </div>
     </div>
 </asp:Content>
