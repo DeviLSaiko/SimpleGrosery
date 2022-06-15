@@ -58,6 +58,15 @@ namespace WebUI.View.Admin {
         protected global::System.Web.UI.WebControls.TextBox txtSellerAdd;
         
         /// <summary>
+        /// err control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label err;
+        
+        /// <summary>
         /// BtnSave control.
         /// </summary>
         /// <remarks>

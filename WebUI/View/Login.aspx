@@ -8,7 +8,23 @@
     <link href="../Asset/Lib/BS/css/bootstrap.min.css" rel="stylesheet" />
 </head>
 <body>
+   <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
+      <a href="/" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
+        <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"/></svg>
+      </a>
 
+      <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+        <li><a href="#" class="nav-link px-2 link-secondary">Home</a></li>
+        <li><a href="#" class="nav-link px-2 link-dark">Features</a></li>
+        <li><a href="#" class="nav-link px-2 link-dark">Pricing</a></li>
+        <li><a href="#" class="nav-link px-2 link-dark">FAQs</a></li>
+        <li><a href="#" class="nav-link px-2 link-dark">About</a></li>
+      </ul>
+
+      <div class="col-md-3 ">
+        <button type="button" class="btn btn-outline-primary me-2">SignUp</button>
+      </div>
+    </header>
 
     <div class="container-fluid">
         <div class="row" style="height:150px;""></div>
@@ -25,25 +41,14 @@
                     <div>
                         <div class="mb-3">
                             <label for="exampleInputEmail1" class="form-label">Email address</label>
-                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
+                            <asp:TextBox ID="txtEmail"  CssClass="form-control" runat="server"></asp:TextBox>
                         </div>
                         <div class="mb-3">
                             <label for="exampleInputPassword1" class="form-label">Password</label>
-                            <input type="password" class="form-control" id="exampleInputPassword1" />
+                            <asp:TextBox ID="txtPassword"  TextMode="Password" CssClass="form-control" runat="server"></asp:TextBox>
                         </div>
-                        <div class="mb-3 form-check">
-                            <input type="radio" class="form-check-input" id="AdminRATIO" />
-                            <label class="form-check-label" for="exampleCheck1">Admin</label>
-                        </div>
-                        <div class="mb-3 form-check">
-                            <input type="radio" class="form-check-input" id="SellerRATIO" />
-                            <label class="form-check-label" for="exampleCheck1">Seller</label>
-                        </div>
-                        <div class="mb-3 d-grid">
-                          <button type="submit" class="btn btn-primary">Login</button>
-                        </div>
-
-                      
+                        <asp:Label ID="eerr" runat="server" CssClass="text-danger" Text=""></asp:Label>
+                        <div class="mb-3 d-grid"><asp:Button ID="btnLogin" cssclass="btn btn-primary" OnClick="btnLogin_Click" runat="server" Text="Login" /> </div>
                     </div>
                 </form>
             </div>

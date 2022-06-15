@@ -68,8 +68,11 @@
 
                     <label for="exampleInputEmail1" class="form-label">Address</label>
                     <asp:TextBox ID="txtSellerAdd" CssClass="form-control" runat="server"></asp:TextBox>
+                    <div>
+                        <asp:Label ID="err" CssClass="text-danger" runat="server" Text=""></asp:Label>
+                    </div>
                 </div>
-
+                
                 <asp:Button Text=" Save  " ID="BtnSave" runat="server" OnClick="BtnSave_Click" CssClass="btn btn-success" />
                 <asp:Button Text="Update" ID="btnUpdate" runat="server" CssClass="btn btn-primary" OnClick="btnUpdate_Click" />
                 <asp:Button Text="Delete" ID="BtnDelete" runat="server" CssClass="btn btn-danger" OnClick="BtnDelete_Click" />
@@ -77,7 +80,7 @@
             </form>
         </div>
         <div class="col-sm-8">
-            <asp:GridView ID="GridView1" CssClass="table table-hover"  EnableViewState="false" runat="server"></asp:GridView>
+            <asp:GridView ID="GridView1" CssClass="table table-hover"  EnableViewState="false" runat="server" AutoGenerateSelectButton="True" OnSelectedIndexChanged="GridView1_SelectedIndexChanged"></asp:GridView>
         </div>
     </div>
 

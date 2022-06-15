@@ -11,7 +11,22 @@ namespace WebUI.View
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            
 
+        }
+
+        protected void btnLogin_Click(object sender, EventArgs e)
+        {
+            if( txtEmail.Text == "Iyappa2" && txtPassword.Text == "@#")
+            {
+                Response.Redirect("Admin/Dashboard.aspx");
+
+            }
+            else
+            {
+                eerr.Text = "Invaild UserName or Password";
+            }
+                
         }
     }
 }

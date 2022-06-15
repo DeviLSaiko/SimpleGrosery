@@ -64,7 +64,9 @@
             </form>
         </div>
         <div class="col-md-8">
-            <asp:GridView runat="server" CssClass="table"></asp:GridView>
+           <div class="col-sm-8">
+            <asp:GridView ID="GridView1" CssClass="table table-hover"  EnableViewState="false" runat="server" AutoGenerateSelectButton="True" OnSelectedIndexChanged="GridView1_SelectedIndexChanged"></asp:GridView>
+        </div>
         </div>
     </div>
 </asp:Content>
