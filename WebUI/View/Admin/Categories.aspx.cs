@@ -77,7 +77,48 @@ namespace WebUI.View.Admin
 
         protected void BtnDelete_Click(object sender, EventArgs e)
         {
+            try
+            {
+                if (txtCateName.Text == "")
+                {
+                    err.Text = "Missing Data";
+                }
+                else
+                {
+                    using (SqlConnection Sqlconnection = new SqlConnection(MyCon()))
+                    {
+                        Sqlconnection.Open();
 
+                        string MyQ = "Delete from Students where StuID=@ID";
+                        SqlCommand MyCmd = new SqlCommand(MyQ, Sqlconnection);
+                        MyCmd.Parameters.AddWithValue("@ID", GridView1.SelectedRow.Cells[1].Text);
+                        MyCmd.ExecuteNonQuery();
+
+                        Sqlconnection.Close();
+                    }
+                }
+            }
+
+            catch(Exception ex)
+            {
+                err.Text = ex.Message;
+            }
+        }
+        int key = 0;
+        protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            txtCateName.Text = GridView1.SelectedRow.Cells[1].Text;
+            txtCateRe.Text = GridView1.SelectedRow.Cells[2].Text;
+           
+
+            if (txtCateName.Text == "")
+            {
+                key = 0;
+            }
+            else
+            {
+                key = Convert.ToInt32(GridView1.SelectedRow.Cells[1].Text);
+            }
         }
     }
 }

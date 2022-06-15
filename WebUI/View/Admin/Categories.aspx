@@ -57,7 +57,7 @@
             </form>
         </div>
         <div class="col-sm-8">
-            <asp:GridView ID="GridView1" CssClass="table table-hover" EnableViewState="false" runat="server" AutoGenerateSelectButton="True"></asp:GridView>
+            <asp:GridView ID="GridView1" CssClass="table table-hover" EnableViewState="false" runat="server" AutoGenerateSelectButton="True" OnSelectedIndexChanged="GridView1_SelectedIndexChanged"></asp:GridView>
         </div>
     </div>
 </asp:Content>
